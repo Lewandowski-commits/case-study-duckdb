@@ -13,7 +13,7 @@ f.status_id,
 s.status,
 f.user_id,
 u."location.city"
- from {{ ref('fct_listings') }} as f
+ from {{ ref('fct_listings_static') }} as f
  left join {{ ref('dim_date') }} as d 
     on f.listing_date_key = d.date_key
  left join {{ ref('stg_dim_platform') }} as plat
