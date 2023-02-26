@@ -12,6 +12,14 @@ This is a case study solved using a forked dbt project relying on a duckdb datab
 3. Final table [fct_listings](https://github.com/Lewandowski-commits/case-study-duckdb/blob/duckdb/models/fct_listings.sql)
 
 ### Task 2
+#### Updated solution description
+*Note:* I initially misunderstood the task, thinking that the report should be a visual one - my solution from that time is described in the **Old description** section below. At least the report is now also visuallised, even if that was not the point.
+
+The report itself can be found [here](https://github.com/Lewandowski-commits/case-study-duckdb/blob/duckdb/models/challenge_a2.sql). It is built using staging dimension tables which pick only the current values for the dimensions (based on the assumption that a `valid_to is null` means it is current).
+
+<details>
+    <summary>See the old description</summary>
+    
 Given the time restrictions, I chose to create the report in PowerBI, which I am familiar with, instead of Looker. After many unsuccessful tries to connect the duckdb to PowerBI, I decided to ingest the data directly from the files, and not using duckdb.
 
 *Note:* The `dim_platform` table suggests that the platforms were renamed from Anibis to Anibis.ch, and Tutti.ch to Tutti instead of the both having .ch removed from them as described in the readme. I assume the tables are correct.
@@ -19,7 +27,7 @@ Given the time restrictions, I chose to create the report in PowerBI, which I am
 The report [file](https://github.com/Lewandowski-commits/case-study-duckdb/blob/duckdb/Challenge%20A2.pbix) can be downloaded from the repo and viewed in PowerBI desktop, or you can check out a screenshot of it below.
 
 ![report screenshot](https://github.com/Lewandowski-commits/case-study-duckdb/blob/duckdb/images/Challenge_A2_Screenshot.png)
-
+</details>
 
 # Testing dbt project: `jaffle_shop`
 
