@@ -1,3 +1,22 @@
+# Case study using dbt and duckdb
+This is a case study solved using a forked dbt project relying on a duckdb database. Original readme of the source repo is available below the solution descriptions.
+
+*Note:* original schema names from the case study challenge descriptions are not used - instead schemas from the forked projects are used due to time constraints on the challenge.
+
+## Challenge A
+
+### Task 1
+
+1. [Source table](https://github.com/Lewandowski-commits/case-study-duckdb/blob/duckdb/models/staging/stg_cln_listings.sql) which also contains a case statement populating the nulls in *last_update_date* column in order to create complete *valid_from* column.
+2. [Snapshot](https://github.com/Lewandowski-commits/case-study-duckdb/blob/duckdb/snapshots/snapshot_fct_listings.sql) 
+3. Final table [fct_listings](https://github.com/Lewandowski-commits/case-study-duckdb/blob/duckdb/models/fct_listings.sql)
+
+### Task 2
+Given the time restrictions, I chose to create the report in PowerBI, which I am familiar with, instead of Looker. After many unsuccessful tries to connect the duckdb to PowerBI, I decided to ingest the data directly from the files, and not using duckdb.
+
+*Note:* The `dim_platform` table suggests that the platforms were renamed from Anibis to Anibis.ch, and Tutti.ch to Tutti instead of the both having .ch removed from them as described in the readme. I assume the tables are correct.
+
+
 # Testing dbt project: `jaffle_shop`
 
 `jaffle_shop` is a fictional ecommerce store. This dbt project transforms raw data from an app database into a customers and orders model ready for analytics.
