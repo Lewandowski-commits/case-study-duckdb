@@ -33,8 +33,20 @@ The report [file](https://github.com/Lewandowski-commits/case-study-duckdb/blob/
 
 ### Task 1
 By most/least selling product types, I assumed count of listings is the defining factor.
+
 a. [Solution](https://github.com/Lewandowski-commits/case-study-duckdb/blob/duckdb/models/challenge_b1a.sql)
+
 b. [Solution](https://github.com/Lewandowski-commits/case-study-duckdb/blob/duckdb/models/challenge_b1b.sql) - here more than 3 results are obtained per each platform, solely because there are multiple product categories with only 1 listing. Without further criteria that would help narrow down the bottom 3, it is impossible to have just 3 `product_type`s returned by the query.
+
+c. [Solution](https://github.com/Lewandowski-commits/case-study-duckdb/blob/duckdb/models/challenge_b1c.sql) - given the following assumptions:
+1. `idle` means the difference between when a listing was published/status is `active`, and when it changed to anything else than `active`
+2. a listing always starts as `active` and only changes status once
+3. if status never changed from `active`, then fill in `valid_to` with the current date
+
+d. [Solution](https://github.com/Lewandowski-commits/case-study-duckdb/blob/duckdb/models/challenge_b1d.sql)
+
+e. 
+
 
 # Testing dbt project: `jaffle_shop`
 
