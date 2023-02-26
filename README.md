@@ -29,6 +29,13 @@ The report [file](https://github.com/Lewandowski-commits/case-study-duckdb/blob/
 ![report screenshot](https://github.com/Lewandowski-commits/case-study-duckdb/blob/duckdb/images/Challenge_A2_Screenshot.png)
 </details>
 
+## Challenge B
+
+### Task 1
+By most/least selling product types, I assumed count of listings is the defining factor.
+a. [Solution](https://github.com/Lewandowski-commits/case-study-duckdb/blob/duckdb/models/challenge_b1a.sql)
+b. [Solution](https://github.com/Lewandowski-commits/case-study-duckdb/blob/duckdb/models/challenge_b1b.sql) - here more than 3 results are obtained per each platform, solely because there are multiple product categories with only 1 listing. Without further criteria that would help narrow down the bottom 3, it is impossible to have just 3 `product_type`s returned by the query.
+
 # Testing dbt project: `jaffle_shop`
 
 `jaffle_shop` is a fictional ecommerce store. This dbt project transforms raw data from an app database into a customers and orders model ready for analytics.
