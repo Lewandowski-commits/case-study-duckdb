@@ -1,4 +1,4 @@
-{% snapshot fct_listings %}
+{% snapshot snapshot_fct_listings %}
 
 {{
     config(
