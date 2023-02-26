@@ -13,7 +13,8 @@ This is a case study solved using a forked dbt project relying on a duckdb datab
 
 ### Task 2
 Given the time restrictions, I chose to create the report in PowerBI, which I am familiar with, instead of Looker. After many unsuccessful tries to connect the duckdb to PowerBI, I decided to ingest the data directly from the files, and not using duckdb.
-*Note:* The `dim_platform` table suggests that the platforms were renamed from Anibis to Anibis.ch, and Tutti to Tutti.ch instead of the other way around which is described in the readme. I assume the tables are correct.
+
+*Note:* The `dim_platform` table suggests that the platforms were renamed from Anibis to Anibis.ch, and Tutti.ch to Tutti instead of the both having .ch removed from them as described in the readme. I assume the tables are correct.
 
 
 # Testing dbt project: `jaffle_shop`
