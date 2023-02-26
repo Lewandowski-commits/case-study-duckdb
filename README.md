@@ -1,7 +1,7 @@
 # Case study using dbt and duckdb
 This is a case study solved using a forked dbt project relying on a duckdb database. Original readme of the source repo is available [here](https://github.com/dbt-labs/jaffle_shop_duckdb).
 
-*Note:* original schema names from the case study challenge descriptions are not used (except for [Challenge C](#challenge-c) - instead schemas from the forked projects are used due to time constraints on the challenge.
+*Note:* original schema names from the case study challenge descriptions are not used (except for [Challenge C](#challenge-c) - instead schemas from the forked projects are used due to time constraints on the challenge. Also, the original seeds/tables from the source repo have not been removed - again, due to time constraints. Please refer to the readme below for exact links to each solution.
 
 ## Challenge A
 
