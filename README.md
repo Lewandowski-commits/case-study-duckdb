@@ -1,7 +1,7 @@
 # Case study using dbt and duckdb
 This is a case study solved using a forked dbt project relying on a duckdb database. Original readme of the source repo is available [here](https://github.com/dbt-labs/jaffle_shop_duckdb).
 
-*Note:* original schema names from the case study challenge descriptions are not used - instead schemas from the forked projects are used due to time constraints on the challenge.
+*Note:* original schema names from the case study challenge descriptions are not used (except for [Challenge C](#challenge-c) - instead schemas from the forked projects are used due to time constraints on the challenge.
 
 ## Challenge A
 
@@ -54,6 +54,6 @@ See chart titles for references to specific sub-tasks. Please note that the visu
 
 ![report screenshot](https://github.com/Lewandowski-commits/case-study-duckdb/blob/duckdb/images/Challenge_B2_Screenshot.png)
 
-# Challenge C
+## Challenge C
 [Solution](https://github.com/Lewandowski-commits/case-study-duckdb/blob/duckdb/challenge_C) per [BigQuery documentation](https://cloud.google.com/bigquery/docs/reference/standard-sql/arrays#scanning_for_values_that_satisfy_a_condition).
 *Note:* The solution file is located in the main directory instead of `models` as duckdb does not support the exact array functions as BigQuery (however in general it does support [LIST](https://duckdb.org/docs/sql/data_types/list.html)s).
