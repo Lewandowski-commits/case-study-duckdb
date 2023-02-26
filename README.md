@@ -16,6 +16,10 @@ Given the time restrictions, I chose to create the report in PowerBI, which I am
 
 *Note:* The `dim_platform` table suggests that the platforms were renamed from Anibis to Anibis.ch, and Tutti.ch to Tutti instead of the both having .ch removed from them as described in the readme. I assume the tables are correct.
 
+The report [file](https://github.com/Lewandowski-commits/case-study-duckdb/blob/duckdb/Challenge%20A2.pbix) can be downloaded from the repo and viewed in PowerBI desktop, or you can check out a screenshot of it below.
+
+![report screenshot](https://github.com/Lewandowski-commits/case-study-duckdb/blob/duckdb/images/Challenge_A2_Screenshot.png)
+
 
 # Testing dbt project: `jaffle_shop`
 
