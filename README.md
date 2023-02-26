@@ -45,7 +45,7 @@ c. [Solution](https://github.com/Lewandowski-commits/case-study-duckdb/blob/duck
 
 d. [Solution](https://github.com/Lewandowski-commits/case-study-duckdb/blob/duckdb/models/challenge_b1d.sql)
 
-e. 
+e. My suggestion would be to monitor the count of updates over time for each platform. For the time range given in challenge A2, no changes are seen in any listings for Tutti, a low but consistent over time amount of updates for Tutti, and sudden and big update spikes for Ricardo. This could indicate the usage patterns for each platform. I ran out of time before I could implement this in SQL - done in PowerBI and can be seen in challenge A task 2 section **Old description**
 
 
 # Testing dbt project: `jaffle_shop`
