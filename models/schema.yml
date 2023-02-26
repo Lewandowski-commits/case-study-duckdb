@@ -80,3 +80,10 @@ models:
         description: Amount of the order (AUD) paid for by gift card
         tests:
           - not_null
+
+sources:
+  - name: jaffle_shop
+    database: jaffle_shop
+    schema: jaffle_shop
+    tables:
+    - name: stg_cln_listings
