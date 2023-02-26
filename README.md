@@ -7,8 +7,8 @@ This is a case study solved using a forked dbt project relying on a duckdb datab
 
 ### Task 1
 
-1. [Source table](https://github.com/Lewandowski-commits/case-study-duckdb/blob/duckdb/models/staging/stg_cln_listings.sql)
-2. [Snapshot](https://github.com/Lewandowski-commits/case-study-duckdb/blob/duckdb/snapshots/snapshot_fct_listings.sql) which also contains a case statement populating the nulls in *last_update_date* column in order to create complete *valid_from* column.
+1. [Source table](https://github.com/Lewandowski-commits/case-study-duckdb/blob/duckdb/models/staging/stg_cln_listings.sql) which also contains a case statement populating the nulls in *last_update_date* column in order to create complete *valid_from* column.
+2. [Snapshot](https://github.com/Lewandowski-commits/case-study-duckdb/blob/duckdb/snapshots/snapshot_fct_listings.sql) 
 3. Final table [fct_listings](https://github.com/Lewandowski-commits/case-study-duckdb/blob/duckdb/models/fct_listings.sql)
 
 ### Task 2
