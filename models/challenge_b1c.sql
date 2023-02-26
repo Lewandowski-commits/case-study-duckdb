@@ -27,7 +27,7 @@ as
     select 
     product_type,
     median(days_until_not_longer_active) median_days_until_not_longer_active,
-    rank() over (partition by product_type order by median(days_until_not_longer_active) desc) as rank_id
+    rank() over (order by median_days_until_not_longer_active desc) as rank_id
     from days_diff
     group by product_type
 )
