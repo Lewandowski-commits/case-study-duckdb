@@ -18,7 +18,7 @@ Given the time restrictions, I chose to create the report in PowerBI, which I am
 
 The report [file](https://github.com/Lewandowski-commits/case-study-duckdb/blob/duckdb/Challenge%20A2.pbix) can be downloaded from the repo and viewed in PowerBI desktop, or you can check out a screenshot of it below.
 
-![report screenshot](images/Challenge_A2_screenshot.png)
+![report screenshot](https://github.com/Lewandowski-commits/case-study-duckdb/blob/duckdb/images/Challenge_A2_Screenshot.png)
 
 
 # Testing dbt project: `jaffle_shop`
