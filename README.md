@@ -12,7 +12,8 @@ This is a case study solved using a forked dbt project relying on a duckdb datab
 3. Final table [fct_listings](https://github.com/Lewandowski-commits/case-study-duckdb/blob/duckdb/models/fct_listings.sql)
 
 ### Task 2
-TBD
+Given the time restrictions, I chose to create the report in PowerBI, which I am familiar with, instead of Looker. After many unsuccessful tries to connect the duckdb to PowerBI, I decided to ingest the data directly from the files, and not using duckdb.
+*Note:* The *dim_platform* table suggests that the platforms were renamed from Anibis to Anibis.ch, and Tutti to Tutti.ch instead of the other way around which is described in the readme. I assume the tables are correct.
 
 
 # Testing dbt project: `jaffle_shop`
