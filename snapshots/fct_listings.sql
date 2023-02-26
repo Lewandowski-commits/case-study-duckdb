@@ -19,10 +19,11 @@ product_type_id,
 status_id,
 user_id,
 creation_date,
-CASE WHEN
-last_update_date IS NULL
-THEN creation_date
-ELSE last_update_date
-END as last_update_date from {{ ref('stg_cln_listings') }}
+case when
+last_update_date is null
+then creation_date
+else last_update_date
+end as last_update_date
+from {{ ref('stg_cln_listings') }}
 
 {% endsnapshot %}
