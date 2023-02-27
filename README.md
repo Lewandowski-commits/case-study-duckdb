@@ -60,5 +60,5 @@ See chart titles for references to specific sub-tasks. Please note that the visu
 ![report screenshot](https://github.com/Lewandowski-commits/case-study-duckdb/blob/duckdb/images/Challenge_B2_Screenshot.png)
 
 ## Challenge C
-[Solution](https://github.com/Lewandowski-commits/case-study-duckdb/blob/duckdb/challenge_C) per [BigQuery documentation](https://cloud.google.com/bigquery/docs/reference/standard-sql/arrays#scanning_for_values_that_satisfy_a_condition).
+[Solution](https://github.com/Lewandowski-commits/case-study-duckdb/blob/duckdb/challenge_C.sql per [BigQuery documentation](https://cloud.google.com/bigquery/docs/reference/standard-sql/arrays#scanning_for_values_that_satisfy_a_condition).
 *Note:* The solution file is located in the main directory instead of `models` as duckdb does not support the exact array functions as BigQuery (however in general it does support [LIST](https://duckdb.org/docs/sql/data_types/list.html)s).
