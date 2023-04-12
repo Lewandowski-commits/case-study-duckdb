@@ -10,6 +10,25 @@ I admit it took me slightly longer than I imagined, however I have never worked 
 
 ## Challenge A
 
+<details>
+    <summary> See the task descriptions, scenarios, and provided supporting resources. </summary>
+  
+- Scenario 1: As a business intelligence developer, I would like to "look back in time" at previous data states of the ‘general_marketplaces.cln_listings’ table. While some source data systems are built in a way that makes accessing historical data possible, this is not the case here: this table has only current data state. In order to record changes to this mutable table over time, it is necessary to use a mechanism to do so.
+    
+- Task 1 (1.5 Points): Create or describe a mechanism/script to register each data change (snapshot of end of day) from the clean table ‘general_marketplaces.cln_listings’ into the fact table ‘general_marketplaces.fct_listings’ for each day of the interval considering validity of the records (SCD type 2).
+    
+- Supporting Resources 1: Kimball documentation and dbt documentation (not mandatory to use dbt, a simple sql script can have the job done*).
+Kimball SCD type 2 https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/type-2/#:~:text=Slowly%20changing%20dimension%20type%202,multiple%20rows%20describing%20each%20member.
+dbt incremental model https://docs.getdbt.com/docs/build/incremental-models#about-incremental_strategy
+dbt snapshot https://docs.getdbt.com/docs/build/snapshots
+
+- Scenario 2: As a business intelligence developer, I would like to see all the listings (classifieds) changes on a daily basis for each platform in order to track its evolution and answer business questions.
+    
+- Task 2 (1.5 Points): Create a report for the period from Dec. 2021 to Jan. 2022 (2 months). Also consider clean-up/mapping data changes that occurred during this period, for example related to platform re-naming recorded in the dimensional table ‘general_marketplaces.dim_platform’.
+    
+- Supporting Resources 2: Spreadsheet with flat dataset to be used for the report OR CSV files with star schema dataset to check for modifications on the tables and data analysis.
+</details>
+    
 ### Task 1
 
 1. [Source table](https://github.com/Lewandowski-commits/case-study-duckdb/blob/duckdb/models/staging/stg_cln_listings.sql) which also contains a case statement populating the nulls in *last_update_date* column in order to create complete *valid_from* column.
@@ -37,7 +56,31 @@ The report [file](https://github.com/Lewandowski-commits/case-study-duckdb/blob/
 
 ## Challenge B
 
-### Task 1
+<details>
+    
+<summary> See the task descriptions, scenarios, and provided supporting resources. </summary>
+- Scenario: Swiss Marketplace Group (SMG) wants to analyse its general listings (classifieds) data to determine which product types are the most popular and which ones are idle. The company wants to use this information to make decisions about which product types they should invest in different ways of promoting (idle listings).
+    
+- Task 1 (2.5 Points): Write a script/query that shows the following information:
+a) The top 3 selling product types by platform.
+b) The bottom 3 selling product types by platform.
+c) The top 3 idle product types (amount of days).
+d) The total amount sold by product type (monetary value rounded to two decimals).
+e) Any other insights you could learn from the data that would be useful for the company to know.
+    
+- Supporting Resources 1: Given that you completed the Challenge A Task 2, you can use the created report output as a start.
+    
+- Task 2 (2.5 Points): Create data visualizations (charts or/and dashboards) that can be used to explain the results of task 1 (a,b,c,d,e).
+a) The top 3 selling product types by platform.
+b) The bottom 3 selling product types by platform.
+c) The top 3 idle product types (amount of days).
+d) The total amount sold by product type (monetary value rounded to two decimals).
+e) Any other insights you could learn from the data that would be useful for the company to know.
+    
+- Supporting Resources 2: Given that you completed the Challenge B Task 1, you can use the results (a,b,c,d,e) as an input data for the visualizations OR you can use the CSV file (challenge_B_task_02_flat_dataset) as a fall-back mechanism to create your data visualizations in case you could not complete Task 1 in time.
+
+</details>
+
 By most/least selling product types, I assumed count of listings is the defining factor.
 
 a. [Solution](https://github.com/Lewandowski-commits/case-study-duckdb/blob/duckdb/models/challenge_b1a.sql)
@@ -60,5 +103,24 @@ See chart titles for references to specific sub-tasks. Please note that the visu
 ![report screenshot](https://github.com/Lewandowski-commits/case-study-duckdb/blob/duckdb/images/Challenge_B2_Screenshot.png)
 
 ## Challenge C
+<details>
+    
+<summary> See the task descriptions, scenarios, and provided supporting resources. </summary>   
+- Scenario 1: The fact table ‘general_marketplaces.fct_listings’ is the central part of a star schema and contains periodic snapshots of listings (classifieds). This table is partitioned on the listing_date_key column and is clustered on the platform_id, product_type_id, status_id and user_id columns. The dimensional table ‘general_marketplaces.dim_user’ contains granular information about user location. The dimensional table ‘general_marketplaces.dim_product_type’ contains granular information about product type tags.
+    
+- Task 1 (2 Points): Please write a SQL script using BigQuery syntax that shows the top 3 countries by number of listings with the product type having the black color for product type tag.
+    
+- Supporting Resources 1: Entity Relationship Diagram (ERD - entity_relationship_diagram.jpg) and BigQuery Syntax documentation.
+    
+- Pre-requisites 1: If you have never used BigQuery, please check how to manipulate the RECORD and REPEATED columns:
+For the RECORD column, a.k.a. STRUCT fields: you can query the ‘location.city’ column as follow:
+SELECT location.city FROM ‘general_marketplaces.dim_user`
+For REPEATED columns, a.k.a. ARRAY columns:
+https://cloud.google.com/bigquery/docs/reference/standard-sql/arrays
+[OPTIONAL] For an overall documentation about the BigQuery queries syntax:
+https://cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax
+    
+</details>
+
 [Solution](https://github.com/Lewandowski-commits/case-study-duckdb/blob/duckdb/challenge_C.sql per [BigQuery documentation](https://cloud.google.com/bigquery/docs/reference/standard-sql/arrays#scanning_for_values_that_satisfy_a_condition).
 *Note:* The solution file is located in the main directory instead of `models` as duckdb does not support the exact array functions as BigQuery (however in general it does support [LIST](https://duckdb.org/docs/sql/data_types/list.html)s).
